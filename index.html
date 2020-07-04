@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equv="X-UA-Compatible" content="ie=edge">
+  <title>Elena Fini</title>
+  <!-- Bootstrap css file -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- font awesome icons -->
+  <link rel="stylesheet" href="./css/all.min.css">
+  <!-- custom css file -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Jquery js file -->
+  <script src="./js/jquery.3.5.1.js"></script>
+  <!-- Bootstrap js file -->
+  <script src="./js/bootstrap.min.js"></script>
+  <!-- font Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- font RobotoSlab -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <!-- font Pacifico -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- font PTSerifCaption -->
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap" rel="stylesheet">
+</head>
+<!-- /////////////////////////////// BODY /////////////////////////////// -->
+<body>
+  <!-- /////////////////// NAVBAR //////////////////// -->
+  <div style="text-align: center;">
+  <nav class="navbar fixed-top" id="navbar">
+      <a class="navbar-brand" href="#aboutme">ABOUT ME</a>
+      <a class="navbar-brand" href="#uniprojects">UNIVERSITY</a>
+      <a class="navbar-brand" href="#awards">AWARDS</a>
+      <a class="navbar-brand" href="#personalprojects">PERSONAL PROJECTS</a>
+    </nav>
+  </div>
+  <!-- /////////////////// CONTENUTO //////////////////// -->
+  <div id="container" data-spy="scroll" data-target="#navbar" data-offset="10">
+    <div class="section" id="aboutme">
+      <img src="./img/photo.png" alt="photo" id="photo" style="text-align: center;">
+        <div class="title1">Elena Fini</div>
+        <div class="title2">Professional and creative portfolio</div>
+        <div id="icons">
+          <a href="https://www.linkedin.com/in/elena-fini-6535971b1/" target="_blank"><i class="fab fa-linkedin fa-3x" style="margin: 0 auto; padding-left: 0px; padding-right:10px; color: #59C6D0;"></i></a>
+          <a href="https://www.facebook.com/elena.fini/" target="_blank"><i class="fab fa-facebook-square fa-3x" style="margin: 0 auto; padding-left: 10px; padding-right:10px; color: #59C6D0;"></i></a>
+          <a href="mailto:elena.fini@outlook.it"><i class="fas fa-envelope-square fa-3x" style="margin: 0 auto; padding-left: 10px; padding-right:10px; color: #59C6D0;"></i></a>
+          <a href="skype:live:elena.fini_1?chat"><i class="fab fa-skype fa-3x" style="margin: 0 auto; padding-left: 10px; padding-right:0px; color: #59C6D0;"></i></a>
+        </div>
+        <p class="normtext" style="font-size: 16px; text-align: center;">
+          Hello! I am an italian girl passionate about programming and digital art.<br />I hold a Bachelor Degree in Physics from the University of Bologna and a Master Degree in Mathematical Engineering from the Polytechnic University of Turin. I completed my master thesis at Los Alamos National Laboratory, studying plasma instabilities. In this portfolio you can find some of my works.<br />
+          <span style="letter-spacing: 0.08rem;"><a class="resumelink" href="./papers/curriculum_inglese.pdf" target="_blank">English résumé</a> | <a class="resumelink" href="./papers/curriculum_italiano.pdf" target="_blank">Italian résumé</a></span><br />
+          You can contact me via email: <span style="color: #000000;"><u>elena.fini@outlook.it</u></span>
+        </p>
+    </div>
+    <!-- /////////////////// UNIVERSITY PROJECTS //////////////////// -->
+    <hr>
+    <div class="section" id="uniprojects">
+      <div class="sectiontitle" style="margin-top:6px;">UNIVERSITY PROJECTS</div>
+    <hr>
+      <!-- *************************************************************************************************** -->
+      <!-- PROJECT BEGIN -->
+      <div class="project">
+      <div class="row">
+      	<div class="w-200" style="padding-left:14px;">
+      		<div class="shadowbox">
+        			<img src="./img/snapshot_fireflies.png" alt="snapshot_fireflies" class="snapshot"/>
+        			<div class="overlay">
+          			<a class="link_image_text" href="./papers/fireflies.pdf" target="_blank">READ THE PAPER</a>
+        			</div>
+              </div>
+          </div>
+          <div class="col">
+            <div style="padding-top: 10px;">
+              <div class="projecttitle">Mathematical modeling and simulation of synchronizing fireflies</div>
+              <span class="proglanguages">C++ <span style="font-weight:300; color:#363636;">|</span> openGL <span style="font-weight:300; color:#363636;">|</span> Visual Studio</span>
+                <p class="normtext" style="margin:10px;">
+                  This project was aimed at applying the <i>Kuramoto model</i> to the synchronization of a group of fireflies. The Kuramoto model is a mathematical, differential model that finds many other applications in biology, such as in the modeling of neurons.<br />
+                  The final result was an application equipped with a UI that allowed to observe the emerging synchronicity of the fireflies.
+                  The simulation was advanced in time using a fourth order Runge-Kutta method, whose implementation in C++ is displayed in the below code-snippet.
+                </p>
+              </div>
+              <!-- CODE BEGIN -->
+              <div class="scrollbar" style="padding:10px;">
+                <div class="codesnippet">
+                  <pre>
+                    <code class="actualcode">
+ <span class="type">double</span> <span class="name">K1</span>, <span class="name">K2</span>, <span class="name">K3</span>, <span class="name">K4</span>, <span class="name">L1</span>, <span class="name">L2</span>, <span class="name">L3</span>, <span class="name">L4</span>;
+ <span class="type">double</span> <span class="name">sum</span>;
+ <span class="type">vettore</span> <span class="name">distanza</span>;
+    <span class="type">double</span> <span class="function">P</span> (<span class="type">int</span> <span class="name">i</span>, <span class="type">double</span> <span class="name">theta_aggiornato</span>) {
+    <span class="name">sum</span> = 0;
+    <span class="keyword">for</span> (<span class="type">int</span> <span class="name">j</span> = 0; <span class="name">j</span> < firefly::N; <span class="name">j</span>++) {
+       <span class="name">distanza</span> = f[i].<span class="function">getPosition()</span> - f[j].<span class="function">getPosition</span>();
+       <span class="keyword">if</span> (<span class="name">j</span> != <span class="name">i</span> && distanza.<span class="function">getModulo</span>() <= firefly::r)
+       <span class="name">sum</span> += sin(f[j].<span class="function">getTheta</span>() - <span class="name">theta_aggiornato</span>);
+     }
+     <span class="keyword">return</span> <span class="name">sum</span>;
+ }
+ <span class="type">void</span> <span class="function">RK4</span> () {
+    <span class="keyword">for</span> (<span class="type">int</span> <span class="name">i</span> = 0; <span class="name">i</span> < firefly::N; <span class="name">i</span>++) {
+       <span class="name">K1</span> = f[i].<span class="function">getOmega</span>();
+       <span class="name">L1</span> = <span class="name">epsilon</span>*f[i].<span class="function">getOmega_nat</span>() - <span class="name">epsilon</span>*f[i].<span class="function">getOmega</span>() -
+       ((f[i].<span class="function">getOmega_max</span>() - f[i].<span class="function">getOmega_min</span>())/2)*sin(f[i].<span class="function">getTheta</span>())*<span class="function">P2</span>(<span class="name">i</span>);
+
+       [...]
+
+       f[i].<span class="function">getTheta</span>() += <span class="name">dt</span> * (<span class="name">K1</span> + 2.0 * <span class="name">K2</span> + 2.0 * <span class="name">K3</span> + <span class="name">K4</span>) / 6.0;
+       f[i].<span class="function">getOmega</span>() += <span class="name">dt</span> * (<span class="name">L1</span> + 2.0 * <span class="name">L2</span> + 2.0 * <span class="name">L3</span> + <span class="name">L4</span>) / 6.0;
+       f[i].<span class="function">checkPhase</span>();
+       }
+       <span class="name">t</span> += <span class="name">dt</span>;
+ }
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <!-- CODE END -->
+              <div style="text-align:center;">
+                <img src="./img/fireflies.gif" style="display:inline-block; width:80%; margin:10px;"/>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- END OF PROJECT -->
+    <!-- *************************************************************************************************** -->
+    <hr style="margin:40px 0px">
+    <!-- PROJECT BEGIN -->
+    <div class="project">
+    <div class="row">
+      <div class="w-200" style="padding-left:14px;">
+        <div class="shadowbox">
+            <img src="./img/snapshot_tesitriennale.png" alt="snapshot_tesitriennale" class="snapshot"/>
+            <div class="overlay">
+              <a class="link_image_text" href="https://amslaurea.unibo.it/13419/" target="_blank">READ THE PAPER</a>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+          <div style="padding: 10px;">
+            <div class="projecttitle">Development of a VI to control a stepper motor</div>
+            <span class="proglanguages">LabVIEW</span>
+              <p class="normtext" style="margin:10px;">
+                As a part of my bachelor thesis I designed a <i>Virtual Instrument</i> (VI) with the software LabVIEW in order to communicate, through a motion controller Standa 8SMC4- USB-B9-2, with a stepper motor Standa 8MT167-25. The aim was to study the border effects on a new class of silicon detectors by hitting them with a laser beam in different positions. Below you can find a picture of the motion apparatus.<br />You can also <a href="./img/motioncontroller.vi" download>download the full VI</a>.
+              </p>
+            </div>
+            <div style="text-align:center;">
+              <img src="./img/movimentatore.png" style="display:inline-block; width:50%; margin:10px;"/>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- END OF PROJECT -->
+  <!-- *************************************************************************************************** -->
+  <hr style="margin:40px 0px;">
+  <!-- PROJECT BEGIN -->
+  <div class="project">
+  <div class="row">
+    <div class="w-200" style="padding-left:14px;">
+      <div class="shadowbox">
+          <img src="./img/snapshot_ingvento.png" alt="snapshot_ingvento" class="snapshot"/>
+          <div class="overlay">
+            <a class="link_image_text" href="./papers/flow_around_square_cylinder.pdf" target="_blank">READ THE PAPER</a>
+          </div>
+          </div>
+      </div>
+      <div class="col">
+        <div style="padding: 10px;">
+          <div class="projecttitle">Comparison of standard k-ε and k-ε RNG calculations of the flow around a square cylinder</div>
+          <span class="proglanguages">Ansys Fluent</span>
+            <p class="normtext" style="margin:10px;">
+              In this work I studied two variations of the same turbulence model (the k-ε model), both used in the simulation of the flow around a square cylinder. This project allowed me to learn the basics of CFD and Ansys Fluent. Below is an example of the results obtained by implementing the k-ε RNG model, which correctly reproduces the release of vortices downstream, a typical property of this physical setup.
+            </p>
+          </div>
+          <div style="text-align:center;">
+            <img src="./img/turbulentviscosityratio.gif" style="display:inline-block; width:85%; margin:10px;"/>
+          </div>
+        </div>
+  </div>
+</div>
+<!-- END OF PROJECT -->
+    </div>
+    <!-- /////////////////// AWARDS PROJECTS //////////////////// -->
+    <hr>
+    <div class="section" id="awards">
+      <div class="sectiontitle">AWARDS</div>
+      <hr>
+      <!-- PROJECT BEGIN -->
+      <div class="project">
+      <div class="row">
+        <div class="w-200" style="padding-left:14px;">
+          <div class="shadowbox">
+              <img src="./img/snapshot_smartgrid.png" alt="snapshot_smartgrid" class="snapshot"/>
+              <div class="overlay">
+                <a class="link_image_text" href="https://energie.sia-partners.com/reinventing-idea-mobility-how-electric-vehicles-fit-smart-city" target="_blank">READ THE PAPER</a>
+              </div>
+              </div>
+          </div>
+          <div class="col">
+            <div style="padding: 10px; height: 286px;">
+              <div class="projecttitle">Reinventing the idea of mobility: how electric vehicles fit into a smart city</div>
+                <p class="normtext" style="margin:10px;">
+                  In 2015, while still studying for my Bachelor Degree, I took part in an international contest called Génération Energies, which was promoted by <a href="https://www.sia-partners.com/">Sia Partners</a> and <a href="https://www.rte-france.com/"> RTE France</a>.</a>
+                  The contest required its partecipants to submit a paper with a practical proposal regarding the integration of renewable energies and harvesting technology in the landscape of a smart city. The paper was also required to analyze the feasibility, both from economic and social perspectives, of the presented project.<br />
+                  I submitted a proposal regarding the mutual integration of electric vehicles and the smart grid. The proposal was awarded the 10th prize.
+                </p>
+              </div>
+            </div>
+      </div>
+    </div>
+    <!-- END OF PROJECT -->
+    <hr style="margin:40px 0px;">
+    <!-- PROJECT BEGIN -->
+    <div class="project">
+    <div class="row">
+      <div class="w-200" style="padding-left:14px;">
+        <div class="shadowbox">
+            <img src="./img/snapshot_enertour.png" alt="snapshot_enertour" class="snapshot"/>
+            <div class="overlay">
+              <a class="link_image_text" href="./papers/enertour.pdf" target="_blank">READ THE PAPER</a>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+          <div style="padding: 10px; height: 286px;">
+            <div class="projecttitle">Thermoelectric energy harvesting</div>
+              <p class="normtext" style="margin:10px;">
+                In 2018 I took part in the <a href="http://enertour4students.it/">Enertour4students</a> contest, promoted by IDM Südtirol - Alto Adige. The contest was open to italian engineering students and required to submit a report on different subjects, all in the field of energy saving. I presented a report on thermoelectric energy harvesting in industrial settings.<br />
+                This report, along with other 20, was selected by a committee of entrepreneurs in the field of renewable energies.
+              </p>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- END OF PROJECT -->
+  <hr style="margin:40px 0px;">
+  <!-- PROJECT BEGIN -->
+  <div class="project">
+  <div class="row">
+    <div class="w-200" style="padding-left:14px;">
+      <div class="shadowbox">
+          <img src="./img/snapshot_streetlightning.png" alt="snapshot_streetlightning" class="snapshot"/>
+          <div class="overlay">
+            <a class="link_image_text" href="./papers/streetlightning.pdf" target="_blank">READ THE PAPER</a>
+          </div>
+          </div>
+      </div>
+      <div class="col">
+        <div style="padding: 10px; height: 286px;">
+          <div class="projecttitle">Agent-based modeling and radio frequency energy harvesting: a proposal for smart street lighting</div>
+            <p class="normtext" style="margin:10px;">
+              This paper was submitted, in 2018, to an international contest called Green Brain of the Year, organized by the Middle East Technical University. The contest was open to university students who were interested in energy saving and renewables.<br />
+              The paper presented a practical proposal regarding smart street lightning, with a view to supporting the reduction of energy consumption. The proposal involved the mathematical modeling of street lights as a multi-agent system.<br />
+              <a href="https://ncc.metu.edu.tr/announcement/2018-greenbrain-winners">The paper was awarded the third prize.</a>
+            </p>
+          </div>
+        </div>
+  </div>
+</div>
+<!-- END OF PROJECT -->
+    </div>
+    <!-- /////////////////// PERSONAL PROJECTS //////////////////// -->
+    <hr>
+    <div class="section" id="personalprojects">
+      <div class="sectiontitle">PERSONAL PROJECTS</div>
+    </div>
+    <hr>
+    <!-- LICENSE -->
+    <span> © 2020 Elena Fini - </span>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+</body>
+</html>
