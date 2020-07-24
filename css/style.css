@@ -72,6 +72,10 @@ body {
     color: #F05230 !important;
 }
 
+.fa-instagram-square:hover {
+    color: #F05230 !important;
+}
+
 /* about me */
 #aboutme {
   max-width: 600px;
