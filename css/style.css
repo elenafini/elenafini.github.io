@@ -312,11 +312,19 @@ a:hover {
   }
 
   .title1 {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .title2 {
     font-size: 20px;
+  }
+
+  .sectiontitle {
+    font-size: 25px;
+  }
+
+  .projecttitle {
+    font-size: 18px;
   }
 
   #title {
