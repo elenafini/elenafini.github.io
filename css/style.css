@@ -19,8 +19,8 @@ body {
 #photo {
   display: inline-block;
   padding: 0.5vw;
-  width: 17vw;
-  height: 17vw;
+  width: 22vw;
+  height: 22vw;
   max-width: 210px;
   max-height: 210px;
 }
@@ -327,14 +327,18 @@ a:hover {
     font-size: 18px;
   }
 
+  .proglanguages {
+    font-size: 16px;
+  }
+
   #title {
-    font-size: 8vw;
+    font-size: 10vw;
   }
   #title2 {
-    font-size: 5vw;
+    font-size: 7vw;
   }
   #intro {
-    width: 70vw;
+    width: 90vw;
   }
   .normtext {
     font-size: 3vw;
