@@ -19,10 +19,10 @@ body {
 #photo {
   display: inline-block;
   padding: 0.5vw;
-  width: 20vw;
-  height: 20vw;
-  max-width: 230px;
-  max-height: 230px;
+  width: 17vw;
+  height: 17vw;
+  max-width: 210px;
+  max-height: 210px;
 }
 
 /* vertical line */
