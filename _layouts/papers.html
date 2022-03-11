@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-UK" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="centered" style="padding-bottom: 20px;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <p class="centered">{{ site.description }}</p>
+
+        <div class="centered" id="icons">
+          <a href="https://www.linkedin.com/in/elena-fini-6535971b1/" target="_blank"><i class="fab fa-linkedin fa-2x" style="padding-bottom: 10px; padding-top: 30px; margin: 0 auto; padding-left: 0px; padding-right:10px; color: $color_accent;"></i></a>
+          <!-- <a href="https://www.instagram.com/__lyil/" target="_blank"><i class="fab fa-instagram-square fa-2x" style="padding-bottom: 10px; padding-top: 30px;margin: 0 auto; padding-left: 10px; padding-right:10px; color: $color_accent;"></i></a>
+          --> <a href="mailto:elena.fini@outlook.it"><i class="fas fa-envelope-square fa-2x" style="padding-bottom: 10px; padding-top: 30px;margin: 0 auto; padding-left: 10px; padding-right:10px; color: $color_accent;"></i></a>
+          <a href="skype:live:elena.fini_1?chat"><i class="fab fa-skype fa-2x" style="padding-bottom: 10px; padding-top: 30px;margin: 0 auto; padding-left: 10px; padding-right:0px; color: $color_accent;"></i></a>
+        </div>
+
+        <p class="centered" style="padding-bottom: 20px;">
+          <a href="./papers.html">Click here to read my papers.</a>
+        </p>
+
+      </header>
+      <section>
+
+      <h3>Papers:<br ></h3>
+        {% for elem in site.static_files %}
+          {% if elem.path contains 'assets/papers' %}
+            <li style="padding: 5px;"><a target="_blank" href="./assets/papers/{{ elem.name }}">{{ elem.name }}</a></li>
+          {% endif %}
+        {% endfor %}
+
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+title: Elena's Portfolio
+logo:
+paginate: 5
+description: |-
+  Hi! I am an italian girl interested in programming and digital art.<br />
+  I have been a Visiting Student at Los Alamos National Laboratory and I am now part of CMCC,
+  where I work on maritime weather forecast using Data Assimilation and Machine Learning.
+theme: jekyll-theme-minimal
+plugins:
+- jekyll-seo-tag
+- jekyll-paginate
+categories: [papers, projects]

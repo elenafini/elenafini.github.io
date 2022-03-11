@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-UK" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="centered" style="padding-bottom: 20px;"><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
+
+        <p class="centered">{{ site.description }}</p>
+
+        <div class="centered" id="icons">
+          <a href="https://www.linkedin.com/in/elena-fini-6535971b1/" target="_blank"><i class="fab fa-linkedin fa-2x" style="padding-bottom: 10px; padding-top: 30px; margin: 0 auto; padding-left: 0px; padding-right:10px; color: $color_accent;"></i></a>
+          <!-- <a href="https://www.instagram.com/__lyil/" target="_blank"><i class="fab fa-instagram-square fa-2x" style="padding-bottom: 10px; padding-top: 30px;margin: 0 auto; padding-left: 10px; padding-right:10px; color: $color_accent;"></i></a>
+          --> <a href="mailto:elena.fini@outlook.it"><i class="fas fa-envelope-square fa-2x" style="padding-bottom: 10px; padding-top: 30px;margin: 0 auto; padding-left: 10px; padding-right:10px; color: $color_accent;"></i></a>
+          <a href="skype:live:elena.fini_1?chat"><i class="fab fa-skype fa-2x" style="padding-bottom: 10px; padding-top: 30px;margin: 0 auto; padding-left: 10px; padding-right:0px; color: $color_accent;"></i></a>
+        </div>
+
+        <p class="centered" style="padding-bottom: 20px;">
+          <a href="./papers">Click here to read my papers.</a>
+        </p>
+
+      </header>
+      <section>
+
+        {% for post in site.categories.projects %}
+          <article>
+            <h2>{{ post.title }}</h2>
+            {{ post.content }}
+          </article>
+          <!-- <h4>Tags: 
+            {% for tag in post.tags %}
+              <a href="./{{ tag }}.html">{{ tag }}</a>
+            {% endfor %}
+          </h4> -->
+        {% endfor %}
+
+        <!-- {% for post in paginator.posts %}
+        {% if post.category == projects %}
+        <article>
+          <h2>{{ post.title }}</h2>
+          {{ post.content }}
+        </article>
+        <h4>Tags: 
+          {% for tag in post.tags %}
+            <a href="./{{ tag }}.html">{{ tag }}</a>
+          {% endfor %}
+        </h4>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.total_pages > 1 %}
+      <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Prev</a>
+        {% else %}
+          <span>&laquo; Prev</span>
+        {% endif %}
+      
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <em>{{ page }}</em>
+          {% elsif page == 1 %}
+            <a href="/">{{ page }}</a>
+          {% else %}
+            <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+      
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+        {% else %}
+          <span>Next &raquo;</span>
+        {% endif %}
+      </div>
+      {% endif %} -->
+
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+  </body>
+</html>
