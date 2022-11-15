@@ -5,7 +5,9 @@ description: |-
   Hi! I am an italian girl, currently living in Denmark, and I am passionate about science and nature.<br />
   
   I have been a Visiting Student at Los Alamos National Laboratory and I have been part of CMCC,
-  working on maritime weather forecast. I am currently a software engineer for wind turbines.
+  working on maritime weather forecast using Data Assimilation.
+  
+  Now I am working in the renewable energy field, as a software engineer for wind turbines.
 theme: jekyll-theme-minimal
 plugins:
 - jekyll-seo-tag
