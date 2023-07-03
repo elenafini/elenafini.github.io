@@ -40,7 +40,7 @@
       <h3>Papers:<br ></h3>
         {% for elem in site.static_files %}
           {% if elem.path contains 'assets/papers' %}
-            <li style="padding: 5px;"><a target="_blank" href="./{{ elem.name }}">{{ elem.name }}</a></li>
+            <li style="padding: 5px;"><a target="_blank" href="./../assets/papers/{{ elem.name }}">{{ elem.name }}</a></li>
           {% endif %}
         {% endfor %}
 
