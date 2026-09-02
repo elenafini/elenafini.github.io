@@ -31,13 +31,13 @@
         </div>
 
         <p class="centered" style="padding-bottom: 20px;">
-          <a href="./">Click here to read my papers.</a>
+          <a href="./">Click here to read about my projects.</a>
         </p>
 
       </header>
       <section>
 
-      <h3>Papers:<br ></h3>
+      <h3>Reports:<br ></h3>
         {% for elem in site.static_files %}
           {% if elem.path contains 'assets/papers' %}
             <li style="padding: 5px;"><a target="_blank" href="./../assets/papers/{{ elem.name }}">{{ elem.name }}</a></li>
